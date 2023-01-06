@@ -42,10 +42,13 @@ docker rmi `docker images | grep none | awk '{print $3}'`
 ```
 python integer to float
 python3.9
-from numpy import zeros
-from numpy import float64
+from numpy import zeros, float64, integer
 m=3
 nbcm=6.0
 zeros([m, m*nbcm], dtype = float64)
+
+numpy zeros 'float' object cannot be interpreted as an integer 
+
 TypeError: 'float' object cannot be interpreted as an integer
+TypeError: 'float' object cannot be interpreted as an index
 ```
