@@ -38,22 +38,28 @@
 
 		//checks for Chrome and doesn't allow user to proceed if browser isn't Chrome
 		var isChrome = window.navigator.userAgent.match("Chrome");
+		var isSafari = window.navigator.userAgent.match("Safari");
 		var isFirefox = window.navigator.userAgent.match("Firefox");
 
-		if (!isChrome){
+		if (isChrome) {
+			instruct.innerHTML = instructions[index];
+			instruct.setAttribute("id", index);
+			div.insertBefore(instruct, div.firstChild);
+			// console.log("Chrome")
+		} else if (isSafari) {
+			instruct.innerHTML = instructions[index];
+			instruct.setAttribute("id", index);
+			div.insertBefore(instruct, div.firstChild);
+			// console.log("Safari")
+		} else {
 			instruct.innerHTML = otherBrowsers[0];
 			div.insertBefore(instruct, div.firstChild);
-			if (isFirefox){
+			if (isFirefox) {
 				// add later
 			}
 			skip.style.display = "none";
 			next.style.display = "none";
 			// console.log("not Chrome")
-		} else {
-			instruct.innerHTML = instructions[index];
-			instruct.setAttribute("id", index);
-			div.insertBefore(instruct, div.firstChild);
-			// console.log("Chrome")
 		}
 
 		next.addEventListener("click", function(){
