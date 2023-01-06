@@ -39,15 +39,15 @@
 		//checks for Chrome and doesn't allow user to proceed if browser isn't Chrome
 		var isChrome = window.navigator.userAgent.match("Chrome");
 		var isSafari = window.navigator.userAgent.match("Safari");
+		var isWechat = window.navigator.userAgent.match("AppleWebKit");
 		var isFirefox = window.navigator.userAgent.match("Firefox");
-		alert(window.navigator.userAgent)
 
 		if (isChrome) {
 			instruct.innerHTML = instructions[index];
 			instruct.setAttribute("id", index);
 			div.insertBefore(instruct, div.firstChild);
 			// console.log("Chrome")
-		} else if (isSafari) {
+		} else if (isSafari || isWechat) {
 			instruct.innerHTML = instructions[index];
 			instruct.setAttribute("id", index);
 			div.insertBefore(instruct, div.firstChild);
