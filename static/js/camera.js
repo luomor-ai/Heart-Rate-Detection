@@ -77,6 +77,7 @@ var camera = (function(){
         initCanvas();
       }, errorCallback);
     } else if(navigator.mediaDevices) {
+      video.setAttribute("playsinline", true);
       navigator.mediaDevices.getUserMedia({
         video: true,
         audio: false
