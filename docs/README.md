@@ -25,6 +25,8 @@ docker ps|grep heart
 docker ps -a|grep heart
 docker logs -f heart-rate
 sudo docker stop heart-rate
+sudo docker start heart-rate
+sudo docker stop heart-rate
 sudo docker rm heart-rate
 
 https://heart.7otech.com/
