@@ -31,6 +31,9 @@ var camera = (function(){
                       || navigator.webkitGetUserMedia
                       || navigator.mozGetUserMedia
                       || navigator.msGetUserMedia;
+    if(navigator.mediaDevices) {
+      navigator.getUserMedia = navigator.mediaDevices.getUserMedia;
+    }
 
     window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
 
