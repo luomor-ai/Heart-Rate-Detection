@@ -36,11 +36,11 @@ function minimizeVideo(){
   $("#heartbeat").animate({
     width: 600,
     height: 600,
-    top: "-500px",
+    top: "-700px",
     left: "30%"
   }, delay);
   $("#graphs").animate({
-    top: "-500px"
+    top: "-700px"
   }, delay);
   $("#minToggle").html("Maximize Video");
 
