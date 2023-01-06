@@ -181,7 +181,7 @@ def jadeR(X):
 	# Storage for cumulant matrices
 	# print(m) 3
 	# print(nbcm) 6.0
-	m = float(m)
+	nbcm = int(nbcm)
 	CM = matrix(zeros([m, m*nbcm], dtype = float64))
 	R = matrix(eye(m, dtype=float64)) #[[ 1.  0.  0.] [ 0.  1.  0.] [ 0.  0.  1.]]
 	# Temp for a cum. matrix
