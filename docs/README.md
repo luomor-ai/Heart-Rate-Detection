@@ -23,8 +23,8 @@ sudo docker run --name heart-rate -itd -p 8011:8000 yiluxiangbei/heart-rate-dete
 sudo docker run --name heart-rate -itd -v $(pwd):/app -p 8011:8000 yiluxiangbei/heart-rate-detection:v2
 docker ps|grep heart
 docker ps -a|grep heart
-docker logs -f heart-rate
 
+docker logs -f heart-rate
 sudo docker stop heart-rate
 sudo docker start heart-rate
 
