@@ -13,7 +13,7 @@ dataSocket.onmessage = function (e) {
 }
 
 function sendData(data) {
-	// dataSocket.send(data);
+	dataSocket.send(data);
 }
 
 dataSocket.onclose = function () {
