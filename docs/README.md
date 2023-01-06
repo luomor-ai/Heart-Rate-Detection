@@ -46,6 +46,9 @@ from numpy import zeros, float64, integer
 m=3
 nbcm=6.0
 zeros([m, m*nbcm], dtype = float64)
+m=3
+nbcm=6
+zeros([m, m*nbcm], dtype = float64)
 
 numpy zeros 'float' object cannot be interpreted as an integer 
 
