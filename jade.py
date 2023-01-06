@@ -179,6 +179,8 @@ def jadeR(X):
 	# number of cumulant matrices
 	nbcm = dimsymm #6
 	# Storage for cumulant matrices
+	print(m)
+	print(nbcm)
 	CM = matrix(zeros([m, m*nbcm], dtype = float64))
 	R = matrix(eye(m, dtype=float64)) #[[ 1.  0.  0.] [ 0.  1.  0.] [ 0.  0.  1.]]
 	# Temp for a cum. matrix
