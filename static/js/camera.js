@@ -299,7 +299,7 @@ var camera = (function(){
                         .attr("r", r)
                         .attr("fill", "#DA755C");
       circleSVG.append("text")
-               .text(heartrate >> 0)
+               .text("心率: " + heartrate >> 0)
                .attr("text-anchor", "middle")
                .attr("x", cx )
                .attr("y", cy + 10)
