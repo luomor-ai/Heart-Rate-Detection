@@ -1,22 +1,21 @@
-var dataSocket = new WebSocket("wss://"+ location.host + "/echo");
+var dataSocket = new WebSocket("wss://" + location.host + "/echo");
 
-dataSocket.onopen = function(){
+dataSocket.onopen = function () {
 	console.log("websocket open!");
 }
 
-dataSocket.onmessage =  function(e){
+dataSocket.onmessage = function (e) {
 	var data = JSON.parse(e.data);
 
-	if (data.id === "ICA"){
+	if (data.id === "ICA") {
 		camera.cardiac(data.array, data.bufferWindow);
 	}
-
 }
 
-function sendData(data){
-	dataSocket.send(data);
+function sendData(data) {
+	// dataSocket.send(data);
 }
 
-dataSocket.onclose = function(){
+dataSocket.onclose = function () {
 	console.log('closed');
 }
