@@ -32,7 +32,7 @@ var camera = (function(){
                       || navigator.mozGetUserMedia
                       || navigator.msGetUserMedia;
     if(navigator.mediaDevices) {
-      navigator.getUserMedia = navigator.mediaDevices.getUserMedia;
+      // navigator.getUserMedia = navigator.mediaDevices.getUserMedia;
     }
 
     window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
@@ -42,7 +42,7 @@ var camera = (function(){
     var buttonBar = document.getElementById("buttonBar");
     var allowWebcam = document.getElementById("allowWebcam");
 
-    if (navigator.getUserMedia){
+    if (navigator.getUserMedia) {
       navigator.getUserMedia({
         video: true,
         audio: false
@@ -76,7 +76,43 @@ var camera = (function(){
 
         initCanvas();
       }, errorCallback);
-      };
+    } else if(navigator.mediaDevices) {
+      navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: false
+      }).then(function(stream) {
+        /*if (video.mozSrcObject !== undefined) { // for Firefox
+          video.mozSrcObject = stream;
+        } else {
+          video.src = window.URL.createObjectURL(stream);
+        }*/
+        if (window.stream) {
+          //先关闭之前已经打开的设备
+          window.stream.getTracks().forEach((track) => {
+            track.stop();
+          });
+        }
+        try {
+          window.stream = stream;
+          video.srcObject = stream;
+        } catch (error) {
+          video.src = window.URL.createObjectURL(stream); //老的播放方式
+        }
+        video.onloadedmetadata = function(e) {
+          video.play();
+        };
+
+        hidden.style.display = "none";
+        hidden.className = "";
+        allowWebcam.style.display = "none";
+
+        buttonBar.className = "button";
+
+        initCanvas();
+      }, function (e) {
+        console.log('Error getting user media.', e);
+      });
+    };
   };
 
   function initCanvas(){
