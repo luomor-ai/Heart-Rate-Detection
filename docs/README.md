@@ -1,4 +1,6 @@
 ```shell
+sudo docker run --rm -it -v $(pwd):/app python:3.6 /bin/bash
+
 sudo docker build -t yiluxiangbei/heart-rate-detection:v1 -f docker/Dockerfile .
 sudo docker build -t yiluxiangbei/heart-rate-detection:v2 -f docker/Dockerfile .
 
