@@ -54,4 +54,6 @@ numpy zeros 'float' object cannot be interpreted as an integer
 
 TypeError: 'float' object cannot be interpreted as an integer
 TypeError: 'float' object cannot be interpreted as an index
+
+https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html
 ```

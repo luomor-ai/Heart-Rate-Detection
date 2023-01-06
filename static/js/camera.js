@@ -111,6 +111,8 @@ var camera = (function(){
         initCanvas();
       }, function (e) {
         console.log('Error getting user media.', e);
+      }).catch(function(error) {
+        console.log(error.name + ": " + error.message);
       });
     };
   };
