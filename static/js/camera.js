@@ -40,12 +40,28 @@ var camera = (function(){
       navigator.getUserMedia({
         video: true,
         audio: false
-      }, function(stream){
-        if (video.mozSrcObject !== undefined) { // for Firefox
+      }, function(stream) {
+        /*if (video.mozSrcObject !== undefined) { // for Firefox
           video.mozSrcObject = stream;
         } else {
           video.src = window.URL.createObjectURL(stream);
+        }*/
+        if (window.stream) {
+          //先关闭之前已经打开的设备
+          window.stream.getTracks().forEach((track) => {
+            track.stop();
+          });
         }
+        try {
+          window.stream = stream;
+          video.srcObject = stream;
+        } catch (error) {
+          video.src = window.URL.createObjectURL(stream); //老的播放方式
+        }
+        video.onloadedmetadata = function(e) {
+          video.play();
+        };
+
         hidden.style.display = "none";
         hidden.className = "";
         allowWebcam.style.display = "none";

@@ -3,3 +3,6 @@ standard_init_linux.go:228: exec user process caused: exec format error
 
 Mixed Content: The page at 'https://heart.7otech.com/begin' was loaded over HTTPS, but attempted to connect to the insecure WebSocket endpoint 'ws://heart.7otech.com/echo'. This request has been blocked; this endpoint must be available over WSS.
 https://heart.7otech.com/static/js/websocket.js
+
+Uncaught TypeError: Failed to execute 'createObjectURL' on 'URL': Overload resolution failed.
+    at camera.js:47:34
