@@ -368,8 +368,11 @@ var camera = (function(){
       //   sendData(JSON.stringify({"array": green, "bufferWindow": green.length}));
       // }
       // ** FOR RGB CHANNELS & ICA **
-      if (sendingData){
-        sendData(JSON.stringify({"array": [red, green, blue], "bufferWindow": green.length}));
+      if (sendingData) {
+        sendData(JSON.stringify({
+          "array": [red, green, blue],
+          "bufferWindow": green.length
+        }));
       }
 
     }, Math.round(1000));
