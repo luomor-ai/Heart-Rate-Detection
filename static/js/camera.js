@@ -27,7 +27,10 @@ var camera = (function(){
     video.setAttribute("width", width);
     video.setAttribute("height", height);
 
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+    navigator.getUserMedia = navigator.getUserMedia
+                      || navigator.webkitGetUserMedia
+                      || navigator.mozGetUserMedia
+                      || navigator.msGetUserMedia;
 
     window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
 
@@ -102,8 +105,6 @@ var camera = (function(){
         timeBase: new Date().getTime() / 1000
       })
     });
-
-
 
     startCapture();
   };
