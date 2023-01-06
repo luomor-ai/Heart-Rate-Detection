@@ -286,7 +286,7 @@ var camera = (function(){
 
     if (circle) {
       if(heartrate > 50 && heartrate < 90) {
-        circleSVG.select("text").text(heartrate >> 0);
+        circleSVG.select("text").text("心率: " + heartrate >> 0);
       }
     } else {
       circleSVG = d3.select("#heartbeat")
