@@ -153,6 +153,7 @@ button:visited, button:active{
 .graph {
   float: left;
   margin: 20px;
+  margin-top: 40px;
 }
 
 #confidenceGraph {
@@ -182,7 +183,7 @@ path {
   float: left;
   right: -20px;*/
   display: none;
-  right: 625px;
+  right: 425px;
   top: 175px;
 }
 
