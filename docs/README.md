@@ -18,6 +18,7 @@ curl 'localhost:8000'
 
 sudo docker run --rm -it -p 8011:8000 yiluxiangbei/heart-rate-detection:v2 --entrypoint /bin/bash
 sudo docker run --rm -it -p 8011:8000 yiluxiangbei/heart-rate-detection:v2
+
 sudo docker run --name heart-rate -itd -p 8011:8000 yiluxiangbei/heart-rate-detection:v2
 docker ps|grep heart
 docker ps -a|grep heart
