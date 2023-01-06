@@ -36,7 +36,7 @@ function minimizeVideo(){
   $("#heartbeat").animate({
     width: 600,
     height: 600,
-    top: "-700px",
+    top: "-600px",
     left: "30%"
   }, delay);
   $("#graphs").animate({

@@ -91,7 +91,7 @@ var camera = (function(){
     // ** displays raw data (difference in pixel averages over time sampled 15 times a second) **
     rawDataGraph = new Rickshaw.Graph( {
       element: document.getElementById("rawDataGraph"),
-      width: 600,
+      width: 400,
       height: 120,
       renderer: "line",
       min: -2,
