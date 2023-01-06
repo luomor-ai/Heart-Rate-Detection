@@ -6,4 +6,4 @@ COPY . .
 RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 #CMD ["bash"]
 #CMD ["tail", "-f", "/dev/null"]
-ENTRYPOINT ["docker/deploy.sh"]
+ENTRYPOINT ["/app/docker/deploy.sh"]
