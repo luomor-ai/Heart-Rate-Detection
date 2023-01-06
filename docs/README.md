@@ -38,3 +38,7 @@ https://heart.7otech.com/static/js/websocket.js
 
 docker rmi `docker images | grep none | awk '{print $3}'`
 ```
+
+```
+python integer to float
+```
