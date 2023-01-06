@@ -279,17 +279,15 @@ var camera = (function(){
     }
   };
 
-  function heartbeatCircle(heartrate){
+  function heartbeatCircle(heartrate) {
     var cx = $("#heartbeat").width() / 2;
     var cy = $("#heartbeat").width() / 2;
     r = $("#heartbeat").width() / 4;
 
     if (circle) {
-      if(heartrate > 50 && heartrate < 90)
-      {
-      circleSVG.select("text").text(heartrate >> 0);
+      if(heartrate > 50 && heartrate < 90) {
+        circleSVG.select("text").text(heartrate >> 0);
       }
-
     } else {
       circleSVG = d3.select("#heartbeat")
                     .append("svg")
