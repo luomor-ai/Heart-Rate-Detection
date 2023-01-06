@@ -1,0 +1,2 @@
+sudo docker run --rm -it -p 8011:8000 yiluxiangbei/heart-rate-detection:v2
+standard_init_linux.go:228: exec user process caused: exec format error
