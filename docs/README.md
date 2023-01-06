@@ -12,4 +12,6 @@ sudo docker push yiluxiangbei/heart-rate-detection:v2
 sudo docker run --rm -it yiluxiangbei/heart-rate-detection:v1 bash
 sudo docker run --name heart-rate -itd -p 8011:8000 yiluxiangbei/heart-rate-detection:v2
 sudo docker rm heart-rate
+
+docker rmi `docker images | grep none | awk '{print $3}'`
 ```
