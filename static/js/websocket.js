@@ -1,4 +1,4 @@
-var dataSocket = new WebSocket("ws://"+ location.host + "/echo");
+var dataSocket = new WebSocket("wss://"+ location.host + "/echo");
 
 dataSocket.onopen = function(){
 	console.log("websocket open!");

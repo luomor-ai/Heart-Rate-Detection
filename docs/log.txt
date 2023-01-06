@@ -1,2 +1,5 @@
 sudo docker run --rm -it -p 8011:8000 yiluxiangbei/heart-rate-detection:v2
 standard_init_linux.go:228: exec user process caused: exec format error
+
+Mixed Content: The page at 'https://heart.7otech.com/begin' was loaded over HTTPS, but attempted to connect to the insecure WebSocket endpoint 'ws://heart.7otech.com/echo'. This request has been blocked; this endpoint must be available over WSS.
+https://heart.7otech.com/static/js/websocket.js

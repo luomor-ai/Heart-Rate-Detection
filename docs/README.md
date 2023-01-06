@@ -24,5 +24,10 @@ docker ps|grep heart
 docker ps -a|grep heart
 sudo docker rm heart-rate
 
+https://heart.7otech.com/
+ws://heart.7otech.com/echo
+wss://heart.7otech.com/echo
+https://heart.7otech.com/static/js/websocket.js
+
 docker rmi `docker images | grep none | awk '{print $3}'`
 ```
