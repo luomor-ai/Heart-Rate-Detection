@@ -5,5 +5,5 @@ WORKDIR /app
 COPY . .
 RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 #CMD ["bash"]
-#CMD ["tail", "-f", "/dev/null"]
-CMD ["docker/deploy.sh"]
+CMD ["tail", "-f", "/dev/null"]
+#CMD ["docker/deploy.sh"]
