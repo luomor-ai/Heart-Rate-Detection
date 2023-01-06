@@ -20,8 +20,10 @@ sudo docker run --rm -it -p 8011:8000 yiluxiangbei/heart-rate-detection:v2 --ent
 sudo docker run --rm -it -p 8011:8000 yiluxiangbei/heart-rate-detection:v2
 
 sudo docker run --name heart-rate -itd -p 8011:8000 yiluxiangbei/heart-rate-detection:v2
+sudo docker run --name heart-rate -itd -v $(pwd):/app -p 8011:8000 yiluxiangbei/heart-rate-detection:v2
 docker ps|grep heart
 docker ps -a|grep heart
+sudo docker stop heart-rate
 sudo docker rm heart-rate
 
 https://heart.7otech.com/
